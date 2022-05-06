@@ -8,7 +8,7 @@ body {
 
 .header-mantenimiento {
     grid-area: header;
-    padding: clamp(3rem, 4vw, 5.25rem) 1rem 0;
+    padding: clamp(3vh, 4vw, 5.25rem) 1rem 0;
     .navbar {
         background-color: #fdfdfd;
         &-cont {
@@ -53,6 +53,10 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
+        lottie-player {
+            width: min(30vh, 300px);
+            height: auto;
+        }
         &-info {
             margin-top: clamp(1.25rem, 2vw, 2rem);
             h1 {
@@ -72,7 +76,7 @@ body {
     border-top: 1px solid #C4C4C480;
     ;
     &-cont {
-        padding: 1rem 0 3rem;
+        padding: 3vh 0 4vh;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -98,53 +102,3 @@ body {
         }
     }
 }
-
-@media screen and (min-width: 480px) {}
-
-@media screen and (min-width: 768px) {
-    .hero {
-        picture,
-        .back-overlay {
-            display: block;
-        }
-    }
-    .plan {
-        &-info {
-            &-item {
-                padding: 1rem;
-                width: min(100%, 300px);
-                &:nth-child(3) {
-                    border-bottom: none;
-                }
-                &.pagos {
-                    &::after {
-                        border-radius: 0 8px 8px 0px;
-                    }
-                }
-            }
-            &::after {
-                content: " ";
-                position: absolute;
-                z-index: 3;
-                width: 1px;
-                height: 100%;
-                left: 50%;
-                top: 0%;
-                background-color: #C4C4C440;
-            }
-        }
-    }
-    .formulario-3 {
-        &-cont {
-            .formulario-bottom {
-                .verificacion {
-                    width: unset;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {}
-
-@media screen and (min-width: 1445px) {}

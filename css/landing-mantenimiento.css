@@ -905,7 +905,7 @@ body {
 
 .header-mantenimiento {
   grid-area: header;
-  padding: clamp(3rem, 4vw, 5.25rem) 1rem 0;
+  padding: clamp(3vh, 4vw, 5.25rem) 1rem 0;
 }
 .header-mantenimiento .navbar {
   background-color: #fdfdfd;
@@ -952,6 +952,10 @@ body {
   justify-content: center;
   text-align: center;
 }
+.mensaje-cont lottie-player {
+  width: min(30vh, 300px);
+  height: auto;
+}
 .mensaje-cont-info {
   margin-top: clamp(1.25rem, 2vw, 2rem);
 }
@@ -969,7 +973,7 @@ body {
   border-top: 1px solid rgba(196, 196, 196, 0.5019607843);
 }
 .footer-mantenimiento-cont {
-  padding: 1rem 0 3rem;
+  padding: 3vh 0 4vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -996,36 +1000,4 @@ body {
 }
 .footer-mantenimiento-cont a:hover {
   text-decoration: underline;
-}
-
-@media screen and (min-width: 768px) {
-  .hero picture,
-.hero .back-overlay {
-    display: block;
-  }
-
-  .plan-info-item {
-    padding: 1rem;
-    width: min(100%, 300px);
-  }
-  .plan-info-item:nth-child(3) {
-    border-bottom: none;
-  }
-  .plan-info-item.pagos::after {
-    border-radius: 0 8px 8px 0px;
-  }
-  .plan-info::after {
-    content: " ";
-    position: absolute;
-    z-index: 3;
-    width: 1px;
-    height: 100%;
-    left: 50%;
-    top: 0%;
-    background-color: rgba(196, 196, 196, 0.2509803922);
-  }
-
-  .formulario-3-cont .formulario-bottom .verificacion {
-    width: unset;
-  }
 }/*# sourceMappingURL=landing-mantenimiento.css.map */
