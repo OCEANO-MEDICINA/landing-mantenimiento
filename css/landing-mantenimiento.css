@@ -958,12 +958,6 @@ body {
   width: min(30vh, 300px);
   height: auto;
 }
-.mensaje-cont lottie-player.h-404 {
-  width: unset;
-  transform: scale(1.5);
-  max-width: 420px;
-  margin-bottom: -0.5rem;
-}
 .mensaje-cont-info {
   margin-top: clamp(1.25rem, 2vw, 2rem);
 }
