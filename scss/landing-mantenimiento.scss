@@ -1,9 +1,12 @@
 @import "_founder";
+html {
+    height: 100%;
+}
+
 body {
-    height: 100vh;
-    display: grid;
-    grid-template-areas: "header""content""footer";
-    grid-template-rows: max-content auto max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-mantenimiento {
