@@ -905,7 +905,7 @@ body {
 
 .header-mantenimiento {
   grid-area: header;
-  padding: clamp(4rem, 4vw, 5.25rem) 1rem 0;
+  padding: clamp(3rem, 4vw, 5.25rem) 1rem 0;
 }
 .header-mantenimiento .navbar {
   background-color: #fdfdfd;
