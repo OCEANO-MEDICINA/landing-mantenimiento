@@ -1,4 +1,5 @@
 @import "_founder";
+@import "components/_header-navbar";
 html {
     height: 100%;
 }
@@ -7,6 +8,9 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    &.c-404 {
+        background-color: #467DE4;
+    }
 }
 
 .header-mantenimiento {
@@ -47,8 +51,64 @@ body {
 }
 
 .mensaje {
+    overflow: hidden;
     grid-area: content;
     flex-grow: 1;
+    &-404 {
+        .mensaje-cont {
+            padding: 0 2rem;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            row-gap: 3.75rem;
+            column-gap: 4.75rem;
+            &-info {
+                max-width: 400px;
+                margin: 0;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                z-index: 2;
+                gap: 1.25rem;
+                span {
+                    font-size: clamp(1rem, 2vw, 1.25rem);
+                    color: #fff;
+                    font-weight: 500;
+                }
+                h1 {
+                    color: #fff;
+                    line-height: 1.1;
+                }
+                .botones {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    .btn {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+            &-img {
+                position: relative;
+                .img-404 {
+                    width: min(100%, 480px);
+                    position: relative;
+                    z-index: 2;
+                }
+                .ellipse {
+                    position: absolute;
+                    z-index: 1;
+                    top: 27%;
+                    left: -69%;
+                    max-width: unset;
+                    width: 250%;
+                    transform: rotate(-25deg);
+                }
+            }
+        }
+    }
     &-cont {
         height: 100%;
         display: flex;
@@ -59,12 +119,6 @@ body {
         lottie-player {
             width: min(30vh, 300px);
             height: auto;
-            &.h-404 {
-                width: unset;
-                transform: scale(1.5);
-                max-width: 420px;
-                margin-bottom: -0.5rem;
-            }
         }
         &-info {
             margin-top: clamp(1.25rem, 2vw, 2rem);
@@ -83,7 +137,6 @@ body {
 .footer-mantenimiento {
     grid-area: footer;
     border-top: 1px solid #C4C4C480;
-    ;
     &-cont {
         padding: 3vh 0 4vh;
         display: flex;
@@ -107,6 +160,33 @@ body {
             }
             &:hover {
                 text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mensaje {
+        &-404 {
+            .mensaje-cont {
+                justify-content: center;
+                &-info {
+                    text-align: left;
+                    justify-content: flex-start;
+                    .botones {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 1rem;
+                    }
+                }
+                &-img {
+                    .ellipse {
+                        top: 0;
+                        left: -95%;
+                        width: 490%;
+                        transform: rotate(0deg);
+                    }
+                }
             }
         }
     }
